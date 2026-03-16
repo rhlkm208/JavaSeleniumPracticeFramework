@@ -12,7 +12,7 @@ public class AllTheDifferentTypeOfCharCount {
 
 		char[] ch = str.toCharArray();
 
-		for (Character c : ch) {
+		for (char c : ch) {
 			if (Character.isLetter(c)) {
 				letterCount++;
 			} else if (Character.isDigit(c)) {
