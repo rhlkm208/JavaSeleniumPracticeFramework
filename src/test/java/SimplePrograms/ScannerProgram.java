@@ -16,6 +16,8 @@ public class ScannerProgram {
 		int c = a+b;
 		System.out.println(c);
 		
+		sc.close();
+		
 	}
 
 	public static void main(String[] args) {

@@ -1,89 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-12T22:29:27 IST" name="Default suite" finished-at="2026-03-12T22:29:49 IST" duration-ms="22285">
+  <suite started-at="2026-04-04T01:56:46 IST" name="Default suite" finished-at="2026-04-04T01:56:52 IST" duration-ms="5547">
     <groups>
     </groups>
-    <test started-at="2026-03-12T22:29:27 IST" name="Default test" finished-at="2026-03-12T22:29:49 IST" duration-ms="22285">
-      <class name="PopularWebSiteAutomation.AmazonAutomation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:PopularWebSiteAutomation.AmazonAutomation@71687585]" started-at="2026-03-12T22:29:27 IST" name="setUp" finished-at="2026-03-12T22:29:29 IST" duration-ms="2087" status="PASS">
+    <test started-at="2026-04-04T01:56:46 IST" name="Default test" finished-at="2026-04-04T01:56:52 IST" duration-ms="5547">
+      <class name="SeleniumPractice.SauceDemoTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:SeleniumPractice.SauceDemoTest@14bdbc74]" started-at="2026-04-04T01:56:46 IST" name="setup" finished-at="2026-04-04T01:56:50 IST" duration-ms="3654" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="iPhone17Test()[pri:0, instance:PopularWebSiteAutomation.AmazonAutomation@71687585]" started-at="2026-03-12T22:29:29 IST" name="iPhone17Test" finished-at="2026-03-12T22:29:48 IST" duration-ms="19086" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=145.0.7632.117)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab1a82e6f77e9c28f06cb53b97238f96, clickElement {id=f.795AE5D3CB4DA5E77DF6567997200C7E.d.51DBD0437114DB30544C763EC12E7778.e.83}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60572}, goog:processID: 5920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60572/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ab1a82e6f77e9c28f06cb53b97238f96)] -> id: add-to-cart-button]
-Session ID: ab1a82e6f77e9c28f06cb53b97238f96]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=145.0.7632.117)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab1a82e6f77e9c28f06cb53b97238f96, clickElement {id=f.795AE5D3CB4DA5E77DF6567997200C7E.d.51DBD0437114DB30544C763EC12E7778.e.83}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60572}, goog:processID: 5920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60572/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ab1a82e6f77e9c28f06cb53b97238f96)] -> id: add-to-cart-button]
-Session ID: ab1a82e6f77e9c28f06cb53b97238f96
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at PopularWebSiteAutomation.AmazonAutomation.iPhone17Test(AmazonAutomation.java:71)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddToCart()[pri:0, instance:SeleniumPractice.SauceDemoTest@14bdbc74]" started-at="2026-04-04T01:56:50 IST" name="verifyAddToCart" finished-at="2026-04-04T01:56:51 IST" duration-ms="960" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iPhone17Test -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PopularWebSiteAutomation.AmazonAutomation@71687585]" started-at="2026-03-12T22:29:48 IST" name="tearDown" finished-at="2026-03-12T22:29:49 IST" duration-ms="965" status="PASS">
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:SeleniumPractice.SauceDemoTest@14bdbc74]" started-at="2026-04-04T01:56:51 IST" name="teardown" finished-at="2026-04-04T01:56:52 IST" duration-ms="771" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PopularWebSiteAutomation.AmazonAutomation -->
+        </test-method> <!-- teardown -->
+      </class> <!-- SeleniumPractice.SauceDemoTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

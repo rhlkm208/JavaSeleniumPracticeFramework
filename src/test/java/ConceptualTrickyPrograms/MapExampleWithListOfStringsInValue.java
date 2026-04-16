@@ -38,5 +38,7 @@ public class MapExampleWithListOfStringsInValue {
         	
         	
         });
+        
+        sc.close();
     }
 }

@@ -1,1 +1,0 @@
-{"uuid":"bbbc2952-b755-4215-b62d-625712aa5bd1","name":"TestPractice.TestStatic.setup","children":["070c1761-5af3-4e77-93bc-e8b106530ede"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773324926195,"stop":1773324928119}],"afters":[],"start":1773324926195,"stop":1773324928120}

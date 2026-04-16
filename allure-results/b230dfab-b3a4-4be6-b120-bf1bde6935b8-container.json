@@ -1,1 +1,0 @@
-{"uuid":"b230dfab-b3a4-4be6-b120-bf1bde6935b8","name":"TestCases.FrameTest.setup","children":["dce67643-9a45-4b5d-9a60-8cb3e7314335"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1771152496105,"stop":1771152501164}],"afters":[],"start":1771152496104,"stop":1771152501164}

@@ -19,6 +19,7 @@ public class LeapYear {
 			System.out.println(num + " is not a Leap Year");
 		}
 
+		sc.close();
 	}
 
 }

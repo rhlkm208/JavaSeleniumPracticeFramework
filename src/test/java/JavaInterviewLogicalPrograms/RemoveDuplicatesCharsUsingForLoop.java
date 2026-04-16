@@ -3,7 +3,7 @@ package JavaInterviewLogicalPrograms;
 public class RemoveDuplicatesCharsUsingForLoop {
 
 	public static void main(String[] args) {
-		String str = "banana";
+		String str = "automation";
 		String res = "";
 		
 //		Method 1 - Remove Duplicates

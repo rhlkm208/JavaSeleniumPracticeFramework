@@ -18,6 +18,7 @@ public class OddEven {
 			System.out.println(number + " is Odd");
 		}	
 
+		sc.close();
 	}
 
 }

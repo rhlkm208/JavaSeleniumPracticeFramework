@@ -18,6 +18,7 @@ public class LinkedListClass {
 		System.out.println(names.get(2));
 		names.remove(0);
 		System.out.println(names);
+		System.out.println(names.get(2));
 	}
 
 }
