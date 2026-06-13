@@ -1,6 +1,6 @@
 package TestPractice;
 
-import PracticeTest.Parent;
+import PracticeJava.Parent;
 
 public class Childa extends Parent {
 

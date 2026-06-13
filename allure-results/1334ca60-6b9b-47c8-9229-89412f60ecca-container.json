@@ -1,0 +1,1 @@
+{"uuid":"1334ca60-6b9b-47c8-9229-89412f60ecca","name":"TestPractice.Base_Test.setup","children":["20a8372a-bf45-4df0-8c17-87c04900fa68"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1778430589538,"stop":1778430597173}],"afters":[],"start":1778430589537,"stop":1778430597173}

@@ -4,8 +4,6 @@ public class ReverseNumbers {
 
 	public static void main(String[] args) {
 
-		
-
 //		1st Method
 		int number = 1992;
 		int rev = 0;
@@ -15,7 +13,6 @@ public class ReverseNumbers {
 			int rem = number % 10;
 			rev = (rev * 10) + rem;
 			number = number / 10;
-
 		}
 
 		System.out.println(rev);
@@ -39,7 +36,5 @@ public class ReverseNumbers {
 		} else {
 			System.out.println("Not Palindrome");
 		}
-
 	}
-
 }

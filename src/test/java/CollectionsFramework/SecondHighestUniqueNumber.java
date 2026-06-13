@@ -11,7 +11,7 @@ public class SecondHighestUniqueNumber {
 	public static void main(String[] args) {
 		
 		List<Integer> numList = Arrays.asList(5, 3, 9, 1, 9, 5);
-		List<Integer> numList2 = Arrays.asList(9, 9, 9, 9, 9);
+		List<Integer> numList2 = Arrays.asList(9, 9, 9, 9, 9, 11, 11);
 		
 		System.out.println(FindSecondHighestUniqueNumber(numList));
 		System.out.println(FindSecondHighestUniqueNumber(numList2));
