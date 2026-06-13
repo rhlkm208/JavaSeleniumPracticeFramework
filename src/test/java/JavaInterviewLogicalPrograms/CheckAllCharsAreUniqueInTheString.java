@@ -12,14 +12,10 @@ public class CheckAllCharsAreUniqueInTheString {
 				if (str.charAt(i) == str.charAt(j)) {
 					isUnique = false;
 					break;
-
 				}
-
 			}
-
 		}
-
+		
 		System.out.println(isUnique);
 	}
-
 }

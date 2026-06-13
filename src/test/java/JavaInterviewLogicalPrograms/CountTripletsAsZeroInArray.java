@@ -12,7 +12,7 @@ public class CountTripletsAsZeroInArray {
 					if (nums[i] + nums[j] + nums[k] == 0) {
 						
 						System.out.println("[" + nums[i] + ", " +nums[j] + ", " + nums[k]+"]");
-
+						
 					}
 				}
 			}

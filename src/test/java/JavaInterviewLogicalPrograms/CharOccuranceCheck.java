@@ -5,7 +5,7 @@ public class CharOccuranceCheck {
 	public static void main(String[] args) {
 
 		String str = "Rahul Kumar";
-		str = str.replace(" ", "");
+//		str = str.replace(" ", "");
 		str = str.toLowerCase();
 
 		System.out.println(str);
@@ -29,7 +29,5 @@ public class CharOccuranceCheck {
 
 			System.out.println(ch + " is: " + count);
 		}
-
 	}
-
 }

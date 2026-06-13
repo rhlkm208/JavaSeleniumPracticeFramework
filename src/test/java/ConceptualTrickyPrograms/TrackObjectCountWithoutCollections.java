@@ -3,7 +3,7 @@ package ConceptualTrickyPrograms;
 public class TrackObjectCountWithoutCollections {
 	
 	public static int count=0;
-	String name;
+	public String name;
 	
 	
 	public TrackObjectCountWithoutCollections(String name) {

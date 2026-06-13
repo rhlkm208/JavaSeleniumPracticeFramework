@@ -22,7 +22,7 @@ public class CountRepeatedIntegersInArray {
                     count++;
                 }
             }
-
+            
             // Print only if repeated
             if (count > 1) {
                 System.out.println(

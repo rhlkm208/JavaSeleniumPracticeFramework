@@ -22,6 +22,8 @@ public class MethodChainingWithoutCreatingMultipleObjects {
 		
 		MethodChainingWithoutCreatingMultipleObjects obj = new MethodChainingWithoutCreatingMultipleObjects();
 		obj.MethodA().MethodB().MethodC();
+		obj.MethodA().MethodB();
+		obj.MethodA();
 	}
 
 }
