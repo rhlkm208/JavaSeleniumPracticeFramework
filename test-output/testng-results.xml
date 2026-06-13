@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-02T23:36:32 IST" name="Default suite" finished-at="2026-02-02T23:36:42 IST" duration-ms="10358">
+  <suite started-at="2026-04-19T01:27:36 IST" name="Default suite" finished-at="2026-04-19T01:27:43 IST" duration-ms="6960">
     <groups>
     </groups>
-    <test started-at="2026-02-02T23:36:32 IST" name="Default test" finished-at="2026-02-02T23:36:42 IST" duration-ms="10358">
-      <class name="driverLaunch.DatePicker">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:driverLaunch.DatePicker@387a8303]" started-at="2026-02-02T23:36:32 IST" name="browserLaunch" finished-at="2026-02-02T23:36:41 IST" duration-ms="8920" status="PASS">
+    <test started-at="2026-04-19T01:27:36 IST" name="Default test" finished-at="2026-04-19T01:27:43 IST" duration-ms="6960">
+      <class name="TestLab49.TestClass">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestLab49.TestClass@6cd24612]" started-at="2026-04-19T01:27:36 IST" name="setup" finished-at="2026-04-19T01:27:40 IST" duration-ms="3467" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="DateSelection()[pri:0, instance:driverLaunch.DatePicker@387a8303]" started-at="2026-02-02T23:36:41 IST" name="DateSelection" finished-at="2026-02-02T23:36:41 IST" duration-ms="570" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegistrationPage()[pri:0, instance:TestLab49.TestClass@6cd24612]" started-at="2026-04-19T01:27:40 IST" name="verifyRegistrationPage" finished-at="2026-04-19T01:27:43 IST" duration-ms="3067" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DateSelection -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:driverLaunch.DatePicker@387a8303]" started-at="2026-02-02T23:36:41 IST" name="tearDown" finished-at="2026-02-02T23:36:42 IST" duration-ms="724" status="PASS">
+        </test-method> <!-- verifyRegistrationPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestLab49.TestClass@6cd24612]" started-at="2026-04-19T01:27:43 IST" name="tearDown" finished-at="2026-04-19T01:27:43 IST" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- driverLaunch.DatePicker -->
+      </class> <!-- TestLab49.TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

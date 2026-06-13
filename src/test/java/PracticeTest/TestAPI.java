@@ -29,7 +29,7 @@ public class TestAPI {
 		System.out.println("Initial: " + inventory);
 
 		// 8. getOrDefault()
-		int tablets = inventory.getOrDefault("Tablet", 0);
+		int tablets = inventory.getOrDefault("Keyboard", 0);
 		System.out.println("getOrDefault('Tablet', 0): " + tablets);
 
 	}

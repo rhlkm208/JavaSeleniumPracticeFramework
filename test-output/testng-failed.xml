@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="driverLaunch.DatePicker">
+      <class name="TestLab49.TestClass">
         <methods>
-          <include name="browserLaunch"/>
-          <include name="DateSelection"/>
           <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyRegistrationPage"/>
         </methods>
-      </class> <!-- driverLaunch.DatePicker -->
+      </class> <!-- TestLab49.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
