@@ -1,0 +1,19 @@
+package NumberPrograms;
+
+public class ConvertTheIntegerToRomanUsingArray {
+
+	public static String intToRoman(int num) {
+
+		String[] thousands = { "", "M", "MM", "MMM", "MMMM", "V̅", "V̅M", "V̅MM", "V̅MMM", "V̅MMMM", "MV̅" };
+		String[] hundreds = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+		String[] tens = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+		String[] ones = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+
+		return thousands[num / 1000] + hundreds[(num % 1000) / 100] + tens[(num % 100) / 10] + ones[num % 10];
+	}
+
+	public static void main(String[] args) {
+		System.out.println(intToRoman(4)); // IV
+		System.out.println(intToRoman(6749)); // V̅MDCCXLIX
+	}
+}

@@ -1,0 +1,57 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/company/project.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install -DskipTests'
+            }
+        }
+
+        stage('Smoke Tests') {
+            steps {
+                sh 'mvn test -DsuiteXmlFile=smoke.xml'
+            }
+        }
+
+        stage('Regression') {
+            when {
+                branch 'main'
+            }
+
+            steps {
+                sh 'mvn test -DsuiteXmlFile=regression.xml'
+            }
+        }
+
+        stage('Publish Reports') {
+            steps {
+                publishHTML([
+                    reportDir: 'ExtentReports',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Automation Report'
+                ])
+            }
+        }
+    }
+
+    post {
+
+        success {
+            echo 'Build Passed'
+        }
+
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}

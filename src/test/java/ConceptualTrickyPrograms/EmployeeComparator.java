@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-class EmployeeComparator implements Comparator<EmployeeComparable>{
+public class EmployeeComparator implements Comparator<EmployeeComparable>{
 
     public int compare(EmployeeComparable e1,
                        EmployeeComparable e2){

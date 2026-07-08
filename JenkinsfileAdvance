@@ -1,0 +1,244 @@
+pipeline {
+
+    agent any
+
+    options {
+        timestamps()
+        disableConcurrentBuilds()
+    }
+
+    triggers {
+
+        // Automatic trigger from Git Webhook
+        githubPush()
+
+        // Nightly Regression at 12 AM
+        cron('H 0 * * *')
+    }
+
+    parameters {
+
+        choice(
+            name: 'ENV',
+            choices: ['QA', 'SIT', 'UAT'],
+            description: 'Select Environment'
+        )
+
+        booleanParam(
+            name: 'RUN_REGRESSION',
+            defaultValue: true,
+            description: 'Execute Regression Suite'
+        )
+    }
+
+    environment {
+
+        MAVEN_HOME = tool 'Maven'
+        REPORT_DIR = 'ExtentReports'
+    }
+
+    stages {
+
+        /******************************
+         * CHECKOUT
+         ******************************/
+        stage('Checkout') {
+
+            steps {
+
+                echo "Checking out source code..."
+
+                git(
+                    branch: "${env.BRANCH_NAME}",
+                    credentialsId: 'github-creds',
+                    url: 'https://github.com/company/project.git'
+                )
+            }
+        }
+
+        /******************************
+         * BUILD
+         ******************************/
+        stage('Build') {
+
+            steps {
+
+                echo "Building application..."
+
+                sh '''
+                   mvn clean install -DskipTests
+                '''
+            }
+        }
+
+        /******************************
+         * PR VALIDATION
+         ******************************/
+        stage('PR Validation') {
+
+            when {
+                changeRequest()
+            }
+
+            steps {
+
+                echo "Pull Request Build Detected"
+
+                echo "Running Smoke Suite Only"
+            }
+        }
+
+        /******************************
+         * SMOKE SUITE
+         ******************************/
+        stage('Smoke Tests') {
+
+            steps {
+
+                echo "Executing Smoke Suite"
+
+                sh """
+                    mvn test \
+                    -DsuiteXmlFile=smoke.xml \
+                    -Denv=${params.ENV}
+                """
+            }
+        }
+
+        /******************************
+         * REGRESSION SUITE
+         ******************************/
+        stage('Regression Tests') {
+
+            when {
+
+                allOf {
+
+                    expression {
+                        return params.RUN_REGRESSION
+                    }
+
+                    not {
+                        changeRequest()
+                    }
+                }
+            }
+
+            parallel {
+
+                stage('Chrome Regression') {
+
+                    steps {
+
+                        sh """
+                            mvn test \
+                            -DsuiteXmlFile=regression.xml \
+                            -Dbrowser=chrome \
+                            -Denv=${params.ENV}
+                        """
+                    }
+                }
+
+                stage('Firefox Regression') {
+
+                    steps {
+
+                        sh """
+                            mvn test \
+                            -DsuiteXmlFile=regression.xml \
+                            -Dbrowser=firefox \
+                            -Denv=${params.ENV}
+                        """
+                    }
+                }
+
+                stage('Edge Regression') {
+
+                    steps {
+
+                        sh """
+                            mvn test \
+                            -DsuiteXmlFile=regression.xml \
+                            -Dbrowser=edge \
+                            -Denv=${params.ENV}
+                        """
+                    }
+                }
+            }
+        }
+
+        /******************************
+         * REPORT PUBLISHING
+         ******************************/
+        stage('Publish Reports') {
+
+            steps {
+
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'ExtentReports',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Automation Report'
+                ])
+            }
+        }
+    }
+
+    /**********************************
+     * POST ACTIONS
+     **********************************/
+    post {
+
+        always {
+
+            echo "Archiving Test Results"
+
+            junit allowEmptyResults: true,
+                  testResults: 'target/surefire-reports/*.xml'
+
+            archiveArtifacts(
+                artifacts: 'screenshots/**/*.png',
+                allowEmptyArchive: true
+            )
+        }
+
+        success {
+
+            emailext(
+                subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                Build Successful
+
+                Job: ${env.JOB_NAME}
+                Build: ${env.BUILD_NUMBER}
+                Environment: ${params.ENV}
+
+                Report:
+                ${env.BUILD_URL}
+                """,
+                to: 'qa-team@company.com'
+            )
+        }
+
+        failure {
+
+            emailext(
+                subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                Build Failed
+
+                Job: ${env.JOB_NAME}
+                Build: ${env.BUILD_NUMBER}
+                Environment: ${params.ENV}
+
+                Please check Jenkins Report.
+
+                ${env.BUILD_URL}
+                """,
+                to: 'qa-team@company.com'
+            )
+        }
+    }
+}

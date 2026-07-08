@@ -1,6 +1,6 @@
 package ConceptualTrickyPrograms;
 
-class A {
+public class A {
 	void test(Object o) {
 		System.out.println("Object");
 	}
@@ -10,14 +10,15 @@ class A {
 		System.out.println("String");
 	}
 
-//	void test(Integer i) {
-//	    System.out.println("Integer");
-//	}
-
+	
+	/*
+	 * void test(Integer i) { 
+	 * System.out.println("Integer"); 
+	 * }
+	 */
+			
 	public static void main(String[] args) {
 		A a = new A();
 		a.test(null);
 	}
-	
-	
 }

@@ -1,1 +1,0 @@
-{"uuid":"0b0522a4-5c1f-4bb2-bb5d-e7510ad27adb","name":"TestLab49.BaseTest.setUp","children":["7c9cc18b-64a7-4820-a63d-f22a60383860"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1774605404993,"stop":1774605410837}],"afters":[],"start":1774605404992,"stop":1774605410837}
